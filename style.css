@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --f-family: 'Roboto', sans-serif;
+
+    --bg-menu: #c4c4cc;
+    --bg-menu-hover: #ffffff;
+    --bg-h1: #e0e0e5;
+    --bg-button: #ffffff;
+    --bg-p: #e1e1e6;
+    --background: 
+}
+
+body {
+    background: var(--background) no-repeat center/cover;
+    font-family: var(--f-family);
+    background-color: #272729;
+    transition: 1s;
+    width: 128.rem;
+    height: 72.0rem;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-size: 4.8rem;
+    color: var(--bg-h1);
+    margin-top: 18.5rem;
+    margin-left: 10.2rem;
+}
+
+p {
+    font-size: 1.8rem;
+    color: var(--bg-p);
+    margin-top: 1.6rem;
+    margin-left: 10.2rem;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 2.2rem;
+    height: 9rem;
+    margin: 0 100px;
+}
+
+#menu{
+    display: flex;
+    width: 490px;
+    height: 42px;
+    margin-left: 72px;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+button {
+    font-family: var(--f-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--bg-button);
+    background-color: transparent;
+
+    text-align: center;
+
+    border: 2px solid var(--bg-button);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1.2rem 3.2rem;
+    margin-top: 2.4rem;
+}
+
+button:hover {
+    background-color: rgb(2, 4, 24);
+    font-size: 1.5rem;
+    transition: 1s;
+}
+
+#btn-mobile{
+    display: none;
+  }
+
+#home {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-menu);
+}
+
+a:hover {
+    color: var(--bg-menu-hover);
+    font-weight: 700;
+}
+
+#home{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+#app{
+    min-height: 100vh;
+    display: flex;
+}
+ 
+#app h1 {
+    margin-bottom: 2.4rem;
+}
+
+
+@media(max-width: 500px) {
+    #nav-bar{
+        justify-content: space-between;
+        padding: 0 3rem;
+        margin: 0;
+        width: 100%;
+    }
+    #menu{
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 2.5rem;
+        right: 0px;
+      }
+    
+      #menu, #nav-bar.active #menu{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      h1{
+        font-size: 2.2rem;
+        margin-left: 1.5rem;
+      }
+
+      p {
+        margin-left: 1.5rem;
+      }
+    
+}
